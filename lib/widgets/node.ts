@@ -39,8 +39,6 @@ class Node extends EventEmitter {
       return new Node(options);
     }
 
-    EventEmitter.call(this);
-
     options = options || {};
     this.options = options;
 

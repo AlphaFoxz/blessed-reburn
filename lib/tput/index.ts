@@ -2248,30 +2248,30 @@ export class Tput {
   private static _alias = {
     bools: alias.bools,
     numbers: alias.numbers,
-    string: alias.strings,
+    strings: alias.strings,
   };
   static alias = (function () {
     const result: Record<string, any> = {};
-    // ['bools', 'numbers', 'strings'].forEach(function (type) {
-    //   Object.keys(Tput._alias[type]).forEach(function (key) {
-    //     var aliases = Tput._alias[type][key];
-    //     result[key] = [aliases[0]];
-    //     result[key].terminfo = aliases[0];
-    //     result[key].termcap = aliases[1];
-    //   });
-    // });
-    Object.keys({
-      bools: alias.bools,
-      numbers: alias.numbers,
-      string: alias.strings,
-    }).forEach((type) => {
-      alias[type].forEach((key) => {
-        const aliases = Tput._alias[type][key];
+    ['bools', 'numbers', 'strings'].forEach(function (type) {
+      Object.keys(Tput._alias[type]).forEach(function (key) {
+        var aliases = Tput._alias[type][key];
         result[key] = [aliases[0]];
         result[key].terminfo = aliases[0];
         result[key].termcap = aliases[1];
       });
     });
+    // Object.keys({
+    //   bools: alias.bools,
+    //   numbers: alias.numbers,
+    //   string: alias.strings,
+    // }).forEach((type) => {
+    //   alias[type].forEach((key) => {
+    //     const aliases = Tput._alias[type][key];
+    //     result[key] = [aliases[0]];
+    //     result[key].terminfo = aliases[0];
+    //     result[key].termcap = aliases[1];
+    //   });
+    // });
 
     // Bools
     result.no_esc_ctlc.push('beehive_glitch');

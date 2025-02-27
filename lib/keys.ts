@@ -68,11 +68,11 @@ export { emitKeypressEvents };
 const metaKeyCodeReAnywhere = /(?:\x1b)([a-zA-Z0-9])/;
 const metaKeyCodeRe = new RegExp('^' + metaKeyCodeReAnywhere.source + '$');
 const functionKeyCodeReAnywhere = new RegExp(
-  '(?:\x1b+)(O|N|\[|\[\[)(?:' +
+  '(?:\x1b+)(O|N|\\[|\\[\\[)(?:' +
     [
-      '(\d+)(?:(;\d+)?)([~^$])',
+      '(\\d+)(?:;(\\d+))?([~^$])',
       '(?:M([@ #!a`])(.)(.))', // mouse
-      '(?:1;)?(\d+)?([a-zA-Z])',
+      '(?:1;)?(\\d+)?([a-zA-Z])',
     ].join('|') +
     ')',
 );
