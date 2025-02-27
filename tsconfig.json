@@ -1,4 +1,8 @@
 {
+  "include": [
+    "lib/*",
+    "global.ts"
+  ],
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
@@ -16,14 +20,10 @@
     "moduleDetection": "force",
     "noEmit": true,
     /* Linting */
-    "strict": false,
+    "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": [
-    "lib/*",
-    "global.d.ts"
-  ]
 }
