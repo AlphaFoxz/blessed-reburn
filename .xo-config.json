@@ -1,5 +1,0 @@
-{
-  "space": true,
-  "prettier": true,
-  "envs": ["es2018", "node"]
-}

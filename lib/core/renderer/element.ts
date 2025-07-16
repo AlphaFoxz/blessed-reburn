@@ -1,43 +1,23 @@
-import { Node } from './node';
+import { Node, NodeType, OptionalNodeInitialParams } from './node';
 
-export type ElementType = 'text' | 'box';
-type InferElementProps<TYPE extends ElementType> = TYPE extends 'text'
-  ? { '@textContent': string }
-  : Record<string, any>;
-
-type ElementMeta<TYPE extends ElementType> = {
-  tagName: string;
-  readonly attrs: InferElementProps<TYPE>;
-};
-
-export class Element<TYPE extends ElementType = 'box'> extends Node {
-  protected readonly elementMeta: ElementMeta<TYPE> = {
-    tagName: '',
-    attrs: {} as InferElementProps<TYPE>,
-  };
-  constructor() {
-    super();
-  }
-  setTag(tagName: string) {
-    if (this.elementMeta.tagName !== '') {
-      throw new Error('Tag already set');
-    }
-    this.elementMeta.tagName = tagName;
+export class Element extends Node {
+  constructor(params: OptionalNodeInitialParams) {
+    super(params);
   }
 }
 
-const elementImpls: Record<string, typeof Element<ElementType>> = {};
-
-export function defineElement<TYPE extends ElementType>(
-  tag: TYPE,
-  impl: typeof Element<TYPE>,
+export function createElement(
+  tag: string,
+  props: Record<string, any> = {},
+  children: Node[] = [],
 ) {
-  elementImpls[tag] = impl;
+  return new Element({ tag, props, children, type: NodeType.ELEMENT });
 }
 
-export function createElement(tag: string) {
-  if (elementImpls[tag] === undefined) {
-    throw new Error(`Unknown element: ${tag}`);
-  }
-  return new elementImpls[tag]();
+export function createText(text: string) {
+  return new Element({ type: NodeType.TEXT, text });
+}
+
+export function createComment(text: string) {
+  return new Element({ type: NodeType.COMMENT, text });
 }

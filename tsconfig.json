@@ -1,7 +1,9 @@
 {
   "include": [
     "lib/*",
-    "global.ts"
+    "lib/**/*",
+    "global.d.ts",
+    "env.d.ts"
   ],
   "compilerOptions": {
     "target": "ES2020",
