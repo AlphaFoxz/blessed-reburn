@@ -1,4 +1,4 @@
-import { Node } from './renderer/node';
+import { Node } from '#core/renderer/node';
 
 let screenCount = 0;
 let rootNode: Node | null = null;

@@ -1,0 +1,19 @@
+{
+  "name": "core",
+  "private": true,
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "ws": "^8.18.3",
+    "chalk": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.18.1",
+    "nanoid": "^5.1.5"
+  }
+}

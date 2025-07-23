@@ -1,0 +1,25 @@
+{
+  "include": [
+    "src/*",
+    "src/**/*",
+    "scripts/*",
+    "./globals.d.ts"
+  ],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "#core": [
+        "../core/src"
+      ],
+      "#core/*": [
+        "../core/src/*"
+      ],
+      "#cli": [
+        "./src"
+      ],
+      "#cli/*": [
+        "./src/*"
+      ],
+    }
+  }
+}

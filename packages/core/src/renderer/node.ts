@@ -1,4 +1,4 @@
-import { genId } from '../utilities';
+import { genId } from '#core/utilities';
 
 export enum NodeType {
   TEXT = 'text',

@@ -1,0 +1,23 @@
+{
+  "include": [
+    "src/*",
+    "src/**/*"
+  ],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "#core": [
+        "../core/src"
+      ],
+      "#core/*": [
+        "../core/src/*"
+      ],
+      "#cli": [
+        "../cli/src"
+      ],
+      "#cli/*": [
+        "../cli/src/*"
+      ]
+    }
+  }
+}

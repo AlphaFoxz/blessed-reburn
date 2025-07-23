@@ -1,0 +1,34 @@
+{
+  "name": "cli",
+  "private": true,
+  "version": "0.0.0-alpha.0",
+  "description": "",
+  "type": "module",
+  "main": "./vbed.mjs",
+  "bin": {
+    "vbed": "./dist/vbed.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlphaFoxz/vue-bed"
+  },
+  "scripts": {
+    "dev": "vbed dev",
+    "build": "pnpm build:syncEnv && vite build && pnpm build:prepub",
+    "build:syncEnv": "pnpm exec ./scripts/build-sync.mjs",
+    "build:prepub": "pnpm exec ./scripts/build-prepub.mjs"
+  },
+  "peerDependencies": {
+    "vue-bed": ">0.0.0"
+  },
+  "dependencies": {
+    "@vue/reactivity": "3.5.17",
+    "commander": "^14.0.0",
+    "vue-fn": "0.1.0-beta.2",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "read-pkg": "^9.0.1",
+    "vite-node": "^3.2.4"
+  }
+}

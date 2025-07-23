@@ -2,7 +2,7 @@ import { queuePostFlushCb } from '@vue/runtime-core';
 import chalk from 'chalk';
 // import ansiEscapes from 'ansi-escapes';
 import { Node } from './node';
-import { useGlobalVar } from '../global-var';
+import { useGlobalVar } from '#core/global-var';
 
 const globalVar = useGlobalVar();
 

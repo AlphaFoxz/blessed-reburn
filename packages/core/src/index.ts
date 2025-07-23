@@ -1,0 +1,1 @@
+export { createTerminalApp } from './app';
