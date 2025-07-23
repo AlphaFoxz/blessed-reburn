@@ -18,7 +18,9 @@
     "build:syncEnv": "pnpm exec ./scripts/build-sync.mjs",
     "build:prepub": "pnpm exec ./scripts/build-prepub.mjs"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "@vue-bed/core": "*"
+  },
   "dependencies": {
     "@vue/reactivity": "3.5.17",
     "commander": "^14.0.0",

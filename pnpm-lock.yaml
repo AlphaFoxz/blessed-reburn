@@ -90,6 +90,15 @@ importers:
         specifier: 4.5.4
         version: 4.5.4(@types/node@24.0.15)(rollup@4.45.1)(typescript@5.8.3)(vite@7.0.5(@types/node@24.0.15))
 
+  packages/core/dist:
+    dependencies:
+      chalk:
+        specifier: ^5.4.1
+        version: 5.4.1
+      ws:
+        specifier: ^8.18.3
+        version: 8.18.3
+
   packages/playground:
     dependencies:
       core:
