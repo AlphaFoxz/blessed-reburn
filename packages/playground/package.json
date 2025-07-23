@@ -6,13 +6,11 @@
   "type": "module",
   "main": "./src/main.ts",
   "scripts": {
-    "dev": "pnpm exec vblessed dev",
+    "dev": "pnpm vbed dev",
     "build": "echo 'build'"
   },
   "dependencies": {
     "core": "workspace:*"
   },
-  "devDependencies": {
-    "cli": "workspace:*"
-  }
+  "devDependencies": {}
 }

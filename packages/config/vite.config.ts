@@ -23,7 +23,7 @@ export default defineConfig({
     target: 'node18',
     emptyOutDir: true,
     rollupOptions: {
-      external: [...builtinModules],
+      external: [...builtinModules, 'chalk'],
     },
   },
 });

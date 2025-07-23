@@ -1,7 +1,7 @@
 {
   "name": "cli",
   "private": true,
-  "version": "0.0.0-alpha.0",
+  "version": "0.0.0-alpha.1",
   "description": "",
   "type": "module",
   "main": "./vbed.mjs",
@@ -18,9 +18,7 @@
     "build:syncEnv": "pnpm exec ./scripts/build-sync.mjs",
     "build:prepub": "pnpm exec ./scripts/build-prepub.mjs"
   },
-  "peerDependencies": {
-    "vue-bed": ">0.0.0"
-  },
+  "peerDependencies": {},
   "dependencies": {
     "@vue/reactivity": "3.5.17",
     "commander": "^14.0.0",

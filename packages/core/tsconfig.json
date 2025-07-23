@@ -1,7 +1,8 @@
 {
     "include": [
         "src/*",
-        "src/**/*"
+        "src/**/*",
+        "globals.d.ts"
     ],
     "compilerOptions": {
         "baseUrl": ".",

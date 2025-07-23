@@ -1,6 +1,6 @@
 export default {
   "name": "@vue-bed/cli",
-  "version": "0.0.0-alpha.0",
+  "version": "0.0.0-alpha.1",
   "description": "",
   "type": "module",
   "main": "./vbed.mjs",
@@ -11,9 +11,7 @@ export default {
     "type": "git",
     "url": "git+https://github.com/AlphaFoxz/vue-bed.git"
   },
-  "peerDependencies": {
-    "vue-bed": ">0.0.0"
-  },
+  "peerDependencies": {},
   "dependencies": {
     "@vue/reactivity": "3.5.17",
     "commander": "^14.0.0",
@@ -25,5 +23,5 @@ export default {
   },
   "readme": "ERROR: No README data found!",
   "homepage": "https://github.com/AlphaFoxz/vue-bed#readme",
-  "_id": "cli@0.0.0-alpha.0"
+  "_id": "cli@0.0.0-alpha.1"
 }

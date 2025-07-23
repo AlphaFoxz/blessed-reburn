@@ -1,12 +1,13 @@
 {
   "name": "core",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.0.0-alpha.0",
   "description": "",
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
-    "build": "vite build"
+    "build": "vite build && pnpm build:prepub",
+    "build:prepub": "pnpm exec ./scripts/build-prepub.mjs"
   },
   "dependencies": {
     "ws": "^8.18.3",
@@ -14,6 +15,8 @@
   },
   "devDependencies": {
     "@types/ws": "^8.18.1",
-    "nanoid": "^5.1.5"
+    "nanoid": "^5.1.5",
+    "read-pkg": "^9.0.1",
+    "vite-plugin-dts": "4.5.4"
   }
 }
