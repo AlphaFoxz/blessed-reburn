@@ -4,6 +4,9 @@
     "src/**/*"
   ],
   "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "bundler",
     "baseUrl": "./",
     "paths": {
       "#core": [
@@ -12,18 +15,6 @@
       "#core/*": [
         "../core/src/*"
       ],
-      "#cli": [
-        "../cli/src"
-      ],
-      "#cli/*": [
-        "../cli/src/*"
-      ],
-      "#plugin": [
-        "../plugin/src"
-      ],
-      "#plugin/*": [
-        "../plugin/src/*"
-      ]
     }
   }
 }

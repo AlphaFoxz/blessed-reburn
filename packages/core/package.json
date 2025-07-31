@@ -10,13 +10,15 @@
     "build:prepub": "pnpm exec ./scripts/build-prepub.mjs"
   },
   "dependencies": {
-    "ws": "^8.18.3",
-    "chalk": "^5.4.1"
+    "@vue/runtime-core": "^3.5.18",
+    "chalk": "^5.4.1",
+    "nanoid": "^5.1.5",
+    "unplugin-auto-import": "^19.3.0",
+    "ws": "^8.18.3"
   },
   "devDependencies": {
     "@types/ws": "^8.18.1",
-    "nanoid": "^5.1.5",
-    "read-pkg": "^9.0.1",
-    "vite-plugin-dts": "4.5.4"
+    "@vitejs/plugin-vue": "^6.0.1",
+    "read-pkg": "^9.0.1"
   }
 }

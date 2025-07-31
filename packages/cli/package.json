@@ -14,20 +14,20 @@
   },
   "scripts": {
     "dev": "vbed dev",
-    "build": "pnpm build:syncEnv && vite build && pnpm build:prepub",
+    "build": "pnpm build:syncEnv && pnpm build:compile && pnpm build:prepub",
     "build:syncEnv": "pnpm exec ./scripts/build-sync.mjs",
+    "build:compile": "pnpm exec ./scripts/build-compile.mjs",
     "build:prepub": "pnpm exec ./scripts/build-prepub.mjs"
-  },
-  "peerDependencies": {
-    "@vue-bed/core": "*"
   },
   "dependencies": {
     "@vue/reactivity": "3.5.17",
+    "chalk": "^5.4.1",
     "commander": "^14.0.0",
     "vue-fn": "0.1.0-beta.2",
     "ws": "^8.18.3"
   },
   "devDependencies": {
+    "esbuild": "^0.25.8",
     "read-pkg": "^9.0.1",
     "vite-node": "^3.2.4"
   }

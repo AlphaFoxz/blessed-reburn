@@ -1,16 +1,11 @@
 import { defineConfig } from 'vite';
+import dts from 'vite-plugin-dts';
 import { builtinModules } from 'node:module';
-import path from 'node:path';
 
 export default defineConfig({
+  plugins: [dts()],
   resolve: {
     extensions: ['.ts'],
-    alias: {
-      '#core': path.join(__dirname, '../core/src'),
-      '#cli': path.join(__dirname, '../cli/src'),
-      '#playground': path.join(__dirname, '../playground/src'),
-      '#vite-plugin': path.join(__dirname, '../vite-plugin/src'),
-    },
     dedupe: ['@vue/runtime-core'],
   },
   ssr: { target: 'node' },
@@ -23,7 +18,7 @@ export default defineConfig({
     target: 'node18',
     emptyOutDir: true,
     rollupOptions: {
-      external: [...builtinModules, 'chalk'],
+      external: [...builtinModules, 'chalk', 'vue', '@vue/runtime-core'],
     },
   },
 });

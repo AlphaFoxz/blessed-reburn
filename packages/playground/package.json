@@ -6,13 +6,14 @@
   "type": "module",
   "main": "./src/main.ts",
   "scripts": {
-    "dev": "pnpm vbed dev",
+    "dev": "vbed dev",
     "build": "echo 'build'"
   },
   "dependencies": {
-    "core": "workspace:*"
+    "core": "workspace:^"
   },
   "devDependencies": {
-    "@vue-bed/cli": "*"
+    "cli": "workspace:^",
+    "plugin": "workspace:^"
   }
 }

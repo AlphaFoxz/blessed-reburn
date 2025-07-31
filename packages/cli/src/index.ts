@@ -1,12 +1,9 @@
 import log from '#cli/utils/log';
 import { useCliAgg } from '#cli/domain/cli';
 import packageInfo from '#cli/utils/package-info';
-import { createTerminalApp } from '#core';
 
 const cliAgg = useCliAgg();
 start();
-
-createTerminalApp;
 
 async function start() {
   log.print(

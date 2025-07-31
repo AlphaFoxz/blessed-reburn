@@ -4,7 +4,7 @@ import { ViteNodeServer } from 'vite-node/server';
 import { resolve } from 'node:path';
 import { startHMRServer } from './websocket';
 import { Command } from 'commander';
-import { Reactive, Ref } from '@vue/reactivity';
+import { Ref } from '@vue/reactivity';
 import { DevCommandArgs, SubcommandEnum } from '../define';
 
 interface HotCallback {
@@ -172,10 +172,10 @@ export function requireDevCommand(params: {
 }) {
   return new Command()
     .name('dev')
-    .option('entryPath <entryPath>', 'entry path to run dev server')
-    .action((options) => {
-      if (options.entryPath) {
-        params.devCommandArgs.entryPath = options.entryPath;
+    .argument('[entryPath]', 'entry path to run dev server')
+    .action((entryPath: string) => {
+      if (entryPath) {
+        params.devCommandArgs.entryPath = entryPath;
       }
       params.currentCommand.value = SubcommandEnum.Dev;
     });

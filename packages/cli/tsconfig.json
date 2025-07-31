@@ -6,6 +6,8 @@
     "./globals.d.ts"
   ],
   "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "baseUrl": "./",
     "paths": {
       "#core": [
@@ -20,6 +22,12 @@
       "#cli/*": [
         "./src/*"
       ],
+      "#plugin": [
+        "../plugin/src"
+      ],
+      "#plugin/*": [
+        "../plugin/src/*"
+      ]
     }
   }
 }

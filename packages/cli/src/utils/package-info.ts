@@ -11,9 +11,9 @@ export default {
     "type": "git",
     "url": "git+https://github.com/AlphaFoxz/vue-bed.git"
   },
-  "peerDependencies": {},
   "dependencies": {
     "@vue/reactivity": "3.5.17",
+    "chalk": "^5.4.1",
     "commander": "^14.0.0",
     "vue-fn": "0.1.0-beta.2",
     "ws": "^8.18.3"

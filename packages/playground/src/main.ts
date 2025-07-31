@@ -1,3 +1,3 @@
-import { createTerminalApp } from '#core';
+import { createTerminalApp, Screen } from '#core';
 
-console.warn('dev start');
+// createTerminalApp();
