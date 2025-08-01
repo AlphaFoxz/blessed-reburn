@@ -2,10 +2,10 @@ export default {
   "name": "@vue-bed/cli",
   "version": "0.0.0-alpha.1",
   "description": "",
-  "type": "module",
-  "main": "./vbed.mjs",
+  "type": "commonjs",
+  "main": "./vbed.cjs",
   "bin": {
-    "vbed": "./dist/vbed.mjs"
+    "vbed": "./dist/vbed.cjs"
   },
   "repository": {
     "type": "git",
@@ -15,6 +15,7 @@ export default {
     "@vue/reactivity": "3.5.17",
     "chalk": "^5.4.1",
     "commander": "^14.0.0",
+    "vite": "^6.3.5",
     "vue-fn": "0.1.0-beta.2",
     "ws": "^8.18.3"
   },

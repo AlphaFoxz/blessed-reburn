@@ -1,0 +1,44 @@
+{
+  "include": [
+    "src/*",
+    "src/**/*",
+  ],
+  "exclude": [
+    "**/__tests__",
+  ],
+  "compilerOptions": {
+    "strict": true,
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "target": "ESNext",
+    "noEmit": true,
+    "esModuleInterop": true,
+    // "sourceMap": true,
+    "lib": [
+      "DOM"
+    ],
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "#core": [
+        "../core/src"
+      ],
+      "#core/*": [
+        "../core/src/*"
+      ],
+      "#cli": [
+        "./src"
+      ],
+      "#cli/*": [
+        "./src/*"
+      ],
+      "#plugin": [
+        "../plugin/src"
+      ],
+      "#plugin/*": [
+        "../plugin/src/*"
+      ]
+    }
+  }
+}
