@@ -10,7 +10,8 @@
     "build": "echo 'build'"
   },
   "dependencies": {
-    "core": "workspace:^"
+    "core": "workspace:^",
+    "vue": "^3.5.18"
   },
   "devDependencies": {
     "cli": "workspace:^",

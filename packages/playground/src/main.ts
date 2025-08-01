@@ -1,3 +1,3 @@
 import { createTerminalApp, Screen } from '#core';
 
-// createTerminalApp();
+createTerminalApp(Screen);

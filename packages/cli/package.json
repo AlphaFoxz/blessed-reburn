@@ -16,7 +16,7 @@
     "dev": "vbed dev",
     "build": "pnpm build:syncEnv && pnpm build:compile && pnpm build:prepub",
     "build:syncEnv": "pnpm exec ./scripts/build-sync.mjs",
-    "build:compile": "pnpm exec ./scripts/build-compile.mjs",
+    "build:compile": "vite build",
     "build:prepub": "pnpm exec ./scripts/build-prepub.mjs"
   },
   "dependencies": {
