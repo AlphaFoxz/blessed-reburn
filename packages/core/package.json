@@ -4,7 +4,8 @@
   "version": "0.0.0-alpha.0",
   "description": "",
   "type": "module",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "vite build && pnpm build:prepub",
     "build:prepub": "pnpm exec ./scripts/build-prepub.mjs"
@@ -13,7 +14,7 @@
     "@vue/runtime-core": "^3.5.18",
     "chalk": "^5.4.1",
     "nanoid": "^5.1.5",
-    "unplugin-auto-import": "^19.3.0",
+    "unplugin-auto-import": "^20.0.0",
     "ws": "^8.18.3"
   },
   "devDependencies": {

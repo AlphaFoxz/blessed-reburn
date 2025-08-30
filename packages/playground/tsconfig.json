@@ -1,10 +1,13 @@
 {
   "include": [
+    "*.ts",
     "src/*",
     "src/**/*"
   ],
   "compilerOptions": {
     "baseUrl": "./",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "paths": {
       "#core": [
         "../core/src"

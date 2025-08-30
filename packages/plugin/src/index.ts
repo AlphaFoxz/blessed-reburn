@@ -23,7 +23,8 @@ function optionAsArray<T>(
   return v;
 }
 
-export default function VBed({}: VBedOptios = {}): Plugin[] {
+export default function VBed(options: VBedOptios = {}): Plugin<any>[] {
+  options;
   return [
     vuePlugin({
       // reactivityTransform: true,
@@ -45,6 +46,6 @@ export default function VBed({}: VBedOptios = {}): Plugin[] {
           // ],
         },
       },
-    }),
+    }) as any,
   ];
 }

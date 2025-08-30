@@ -8,23 +8,23 @@ export enum NodeType {
 
 export type OptionalNodeInitialParams = {
   tag?: string;
-  children?: Node[];
+  children?: TNode[];
   props?: Record<string, any>;
-  parentNode?: Node | null;
+  parentNode?: TNode | null;
   text?: string;
   type: NodeType;
 };
 
-export abstract class Node implements Node {
-  private id = genId();
+export abstract class TNode {
+  private readonly id = genId();
   // TODO
   // @ts-ignore
   private tag: string;
-  private children: Node[];
-  private props: Record<string, any>;
-  private parentNode: Node | null;
+  private readonly children: TNode[];
+  private readonly props: Record<string, any>;
+  private parentNode: TNode | null;
   private text: string;
-  private type: NodeType;
+  private readonly type: NodeType;
 
   constructor(param: OptionalNodeInitialParams) {
     this.tag = param.tag || '';
@@ -34,29 +34,29 @@ export abstract class Node implements Node {
     this.text = param.text || '';
     this.type = param.type;
   }
-  getChildren(): Node[] {
+  getChildren(): TNode[] {
     return this.children;
   }
-  appendChild(child: Node): void {
+  appendChild(child: TNode): void {
     this.children.push(child);
   }
-  getFirstChild(): Node | null {
+  getFirstChild(): TNode | null {
     return this.children[0] || null;
   }
-  getLastChild(): Node | null {
+  getLastChild(): TNode | null {
     return this.children[this.children.length - 1] || null;
   }
-  insertBefore(node: Node, anchor: Node | null): void {
+  insertBefore(node: TNode, anchor: TNode | null): void {
     const index = anchor ? this.children.indexOf(anchor) : -1;
     this.children.splice(index, 0, node);
   }
-  getParentNode(): Node | null {
+  getParentNode(): TNode | null {
     return this.parentNode;
   }
-  protected setParentNode(node: Node): void {
+  protected setParentNode(node: TNode): void {
     this.parentNode = node;
   }
-  removeChild(child: Node): void {
+  removeChild(child: TNode): void {
     const index = this.children.findIndex((c) => c.id === child.id);
     if (index !== undefined) {
       this.children.splice(index, 1);
@@ -83,7 +83,7 @@ export abstract class Node implements Node {
   setText(text: string) {
     this.text = text;
   }
-  getPreviousSibling(): Node | null {
+  getPreviousSibling(): TNode | null {
     const parentNode = this.parentNode;
     if (parentNode) {
       const children = parentNode.getChildren();
@@ -94,7 +94,7 @@ export abstract class Node implements Node {
     }
     return null;
   }
-  getNextSibling(): Node | null {
+  getNextSibling(): TNode | null {
     const parentNode = this.parentNode;
     if (parentNode) {
       const children = parentNode.getChildren();
@@ -105,7 +105,7 @@ export abstract class Node implements Node {
     }
     return null;
   }
-  equals(node: Node) {
+  equals(node: TNode) {
     return this.id === node.id;
   }
   hashCode() {

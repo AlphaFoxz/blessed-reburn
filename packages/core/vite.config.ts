@@ -9,8 +9,10 @@ const userConfig: UserConfig = {
     alias: {
       '#core': path.join(import.meta.dirname, 'src'),
     },
+    extensions: ['.ts'],
   },
   plugins: [vue(), autoImport({ imports: ['vitest'], dts: true })],
+  // plugins: [vue()],
   build: {
     rollupOptions: {
       input: 'src/index.ts',
@@ -21,3 +23,4 @@ const userConfig: UserConfig = {
   },
 };
 export default mergeConfig(defaultConfig, userConfig);
+// export default defineConfig(userConfig);

@@ -3,7 +3,7 @@ export default {
   "version": "0.0.0-alpha.1",
   "description": "",
   "type": "commonjs",
-  "main": "./vbed.cjs",
+  "main": "./dist/vbed.cjs",
   "bin": {
     "vbed": "./dist/vbed.cjs"
   },
